@@ -1,0 +1,34 @@
+{
+  "name": "magento2-gulp-package",
+  "version": "1.0.0",
+  "description": "This is a simple skin package for Magento 1 to let you implement the following features to make you able use a quicker and fancy method of coding.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francis S. Spencer",
+  "license": "GNU",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3"
+  },
+  "keywords": [
+    "extension",
+    "magento",
+    "codealist",
+    "fsspencer",
+    "sass",
+    "gulp",
+    "js"
+  ]
+}
