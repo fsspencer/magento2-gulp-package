@@ -22,7 +22,10 @@ var config = {
 
 };
 
+var vendorName = 'Ecommerce121';
+var themeName = 'exercise4';
 var webPath = 'web/';
+var rootPath = '../../../../../pub/static/frontend/' + vendorName + '/' + themeName + '/en_US/';
 
 
 // Sass
@@ -30,7 +33,8 @@ gulp.task('css', function() {
     var stream = gulp.src(webPath + 'scss/styles.scss')
         .pipe(sass())
         .pipe(cssmin())
-        .pipe(gulp.dest(webPath + 'css'));
+        .pipe(gulp.dest(webPath + 'css'))
+        .pipe(gulp.dest(rootPath + 'css'));
 
     if (config.minifyCss === true) {
         stream.pipe(minifycss({keepSpecialComments: '0'}));
@@ -61,6 +65,7 @@ gulp.task('js', function() {
     }
 
     stream.pipe(gulp.dest(webPath + 'js'));
+    stream.pipe(gulp.dest(rootPath + 'js'));
     stream.pipe(livereload());
 
     return stream.pipe(notify({ message: 'Successfully compiled JavaScript' }));
@@ -69,8 +74,9 @@ gulp.task('js', function() {
 // Images
 gulp.task('images', function() {
     return gulp
-        .src(webPath + 'src/images/**/*')
+        .src(webPath + 'images/**/*')
         .pipe(gulp.dest(webPath + 'images'))
+        .pipe(gulp.dest(rootPath + 'images'))
         .pipe(livereload())
         .pipe(notify({ message: 'Successfully processed image' }));
 });
