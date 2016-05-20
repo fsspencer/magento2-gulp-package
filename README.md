@@ -31,10 +31,10 @@ Once you installed node.js, you need Gulp installed globally (maybe you need to 
 $ npm install -g gulp
 ```
 
-Let's create a new skin package on your magento project.
+Let's create a new skin package on your magento2 project.
 ```sh
 $ cd [magento-root-directory]
-$ cd skin/frontend/[your-package-name]/default/
+$ cd app/design/frontend/[your-vendor-name]/[your-theme-name]/
 $ git clone [git-repo-url] .
 $ npm install -d
 ```
@@ -57,7 +57,7 @@ Such as scss files, every js modification you made, will be appended to js/scrip
 
 ### Implement on Magento
 
-To make this work on Magento, you need to add css/styles.css and js/script.js at the head of each module you want. If you want to apply them on every Magento page, you need to add it on the <default> tag.
+To make this work on Magento, you need to add css/styles.css and js/script.js at the head of each module you want. If you want to apply them on every Magento page, you need to add it on the default.xml layout file, as it comes with this package.
 
 That's it! Have a happy coding!
 
