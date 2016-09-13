@@ -1,6 +1,6 @@
-# Gulp Package for Magento 1.x
+# Gulp Package for Magento 2.x
 
-This is a simple skin package for Magento 1 to let you implement the following features to make you able use a quicker and fancy method of coding.
+This is a simple skin package for Magento 2.x to let you implement the following features to make you able use a quicker and fancy method of coding.
 
   - Gulp
   - Sass
@@ -35,7 +35,9 @@ Let's create a new skin package on your magento2 project.
 ```sh
 $ cd [magento-root-directory]
 $ cd app/design/frontend/[your-vendor-name]/[your-theme-name]/
-$ git clone [git-repo-url] .
+$ git init
+$ git remote add remote [git-repo-url]
+$ git pull remote master
 $ npm install -d
 ```
 All the dependences will be downloaded to a new directory called node_modules, which should be added to your .gitignore file (in case you are using git).
@@ -62,7 +64,7 @@ To make this work on Magento, you need to add css/styles.css and js/script.js at
 That's it! Have a happy coding!
 
 
-For more information: www.codealist.com
+For more information: www.codealist.net
 
 
 ### IMPORTANT (For Ubuntu users)
