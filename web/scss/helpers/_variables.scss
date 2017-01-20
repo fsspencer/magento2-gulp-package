@@ -16,41 +16,40 @@ $body-default-padding: 50px;
 $body-default-padding-mobile: 25px;
 $page-title-padding: 70px;
 
-$xxs-w: 319px;
-$xs-w: 320px;
-$s-w: 414px;
-$m-w: 1024px;
-$l-w: 1280px;
-$xl-w: 1440px;
-$xxl-w: 1600px;
-$xxxl-w: 1920px;
-$xxxxl-w: 2560px;
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
-$xxsmall-screens-max-width: 319px;
-$xsmall-screens-min-width: 320px;
-$xsmall-screens-max-width: 413px;
-$small-screens-min-width: 414px;
-$small-screens-max-width: 1023px;
-$medium-screens-min-width: 1024px;
-$medium-screens-max-width: 1279px;
-$large-screens-min-width: 1280px;
-$large-screens-max-width: 1439px;
-$xlarge-screens-min-width: 1440px;
-$xlarge-screens-max-width: 1599px;
-$xxlarge-screens-min-width: 1600px;
-$xxlarge-screens-max-width: 1919px;
-$xxxlarge-screens-min-width: 1920px;
-$xxxlarge-screens-max-width: 2559px;
-$xxxxlarge-screens-min-width: 2560px;
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
 
-$bp-width-desktop: 70em;
-$bp-width-laptop: 64em;
-$bp-width-tablet: 50em;
-$bp-width-phablet: 37.5em;
-$bp-width-mobileonly: 37.5em;
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
 
-$container-width-desktop: 78em;
-$container-width-laptop: 64em;
-$container-width-tablet: 50em;
-$container-width-phablet: 37.5em;
-$container-width-mobileonly: 37.5em;
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
