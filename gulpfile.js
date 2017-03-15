@@ -7,6 +7,7 @@ var gulp        = require('gulp'),
     cache       = require('gulp-cache'),
     cssmin      = require('gulp-cssmin'),
     livereload  = require('gulp-livereload');
+    plumber     = require('gulp-plumber');
 
 
 var config = {
@@ -23,7 +24,7 @@ var config = {
 };
 
 var vendorName = 'Ecommerce121';
-var themeName = 'exercise4';
+var themeName = 'weld';
 var webPath = 'web/';
 var rootPath = '../../../../../pub/static/frontend/' + vendorName + '/' + themeName + '/en_US/';
 
@@ -31,7 +32,12 @@ var rootPath = '../../../../../pub/static/frontend/' + vendorName + '/' + themeN
 // Sass
 gulp.task('css', function() {
     var stream = gulp.src(webPath + 'scss/styles.scss')
-        .pipe(sass())
+        .pipe(plumber())
+        .pipe(sass({errLogToConsole: true}))
+        .on('error', function (err) {
+            console.log(err.message);
+            this.emit('end');
+        })
         .pipe(cssmin())
         .pipe(gulp.dest(webPath + 'css'))
         .pipe(gulp.dest(rootPath + 'css'));
